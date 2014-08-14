@@ -7,7 +7,7 @@ RUN apt-get -y update
 # Install Chef
 RUN apt-get -y install curl build-essential libxml2-dev libxslt-dev git
 RUN curl -L https://www.opscode.com/chef/install.sh | bash
-RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+RUN echo "gem: --no-document" > ~/.gemrc
 
 # Add latest default chef-solo config files
 ADD ./solo.rb /etc/chef/solo.rb
